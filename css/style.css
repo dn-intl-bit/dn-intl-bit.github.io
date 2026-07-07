@@ -197,7 +197,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 .hero-photo-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(100deg, rgba(9,15,28,0.88) 0%, rgba(9,15,28,0.72) 42%, rgba(9,15,28,0.32) 68%, rgba(9,15,28,0.12) 100%),
+  background: linear-gradient(180deg, rgba(9,15,28,0.75) 0%, rgba(9,15,28,0.15) 180px, rgba(9,15,28,0) 320px),
+              linear-gradient(100deg, rgba(9,15,28,0.88) 0%, rgba(9,15,28,0.72) 42%, rgba(9,15,28,0.32) 68%, rgba(9,15,28,0.12) 100%),
               linear-gradient(0deg, rgba(9,15,28,0.55), rgba(9,15,28,0) 40%);
 }
 .hero .container { position: relative; z-index: 2; }

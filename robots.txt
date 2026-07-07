@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://redpin0608-bit.github.io/sitemap.xml
+Sitemap: https://dn-intl-bit.github.io/sitemap.xml

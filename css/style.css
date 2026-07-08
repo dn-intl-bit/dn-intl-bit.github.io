@@ -247,7 +247,7 @@ button { font-family: inherit; cursor: pointer; }
   letter-spacing: 0.02em; white-space: nowrap;
 }
 .logo-chip { display: flex; align-items: center; gap: 9px; flex: none; }
-.logo-chip svg { width: 30px; height: 30px; flex: none; }
+.logo-chip svg, .logo-chip img { width: 30px; height: 30px; flex: none; border-radius: 8px; object-fit: cover; }
 
 /* ---------------- Services ---------------- */
 .services-grid {

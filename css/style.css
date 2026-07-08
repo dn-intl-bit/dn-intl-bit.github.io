@@ -2,7 +2,7 @@
    Daeun International — Design Tokens & Base
    ========================================================================== */
 :root {
-  /* Brand palette: deep indigo (trust) + vermillion red (KR/CN heritage) + amber (prosperity) */
+  /* Brand palette: deep indigo (trust) + gold (prosperity) — single accent color */
   --color-navy-950: #0b1526;
   --color-navy-900: #0f1e35;
   --color-navy-800: #142a48;
@@ -11,9 +11,9 @@
   --color-navy-100: #e7ecf4;
   --color-navy-50:  #f3f6fb;
 
-  --color-red-600: #c8372f;
-  --color-red-500: #dd453b;
-  --color-red-50:  #fdeceb;
+  --color-gold-900: #5a400c;
+  --color-gold-700: #8c6414;
+  --color-gold-50:  #fbf1de;
 
   --color-amber-500: #d99a2b;
   --color-amber-400: #e6b555;
@@ -78,14 +78,14 @@ button { font-family: inherit; cursor: pointer; }
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-red-600);
+  color: var(--color-gold-700);
   margin-bottom: 14px;
 }
 .eyebrow::before {
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--color-red-600);
+  background: var(--color-gold-700);
   display: inline-block;
 }
 .section--navy .eyebrow, .section--navy .eyebrow::before { color: var(--color-amber-400); background: var(--color-amber-400); }
@@ -110,8 +110,8 @@ button { font-family: inherit; cursor: pointer; }
   transition: var(--transition);
   white-space: nowrap;
 }
-.btn--primary { background: var(--color-red-600); color: var(--color-white); }
-.btn--primary:hover { background: var(--color-red-500); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.btn--primary { background: var(--color-amber-500); color: var(--color-navy-950); }
+.btn--primary:hover { background: var(--color-amber-400); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
 .btn--ghost { background: transparent; border-color: rgba(255,255,255,0.4); color: var(--color-white); }
 .btn--ghost:hover { background: rgba(255,255,255,0.12); }
 .btn--dark { background: var(--color-navy-900); color: var(--color-white); }
@@ -158,7 +158,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .nav-main a::after {
   content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0;
-  background: var(--color-red-600); transition: var(--transition);
+  background: var(--color-amber-500); transition: var(--transition);
 }
 .nav-main a:hover::after { width: 100%; }
 
@@ -216,7 +216,7 @@ button { font-family: inherit; cursor: pointer; }
   backdrop-filter: blur(6px);
   margin-bottom: 26px;
 }
-.hero-badge .dot { width: 22px; height: 22px; border-radius: 50%; background: var(--color-red-600); color: #fff; display:flex; align-items:center; justify-content:center; font-size: 12px; }
+.hero-badge .dot { width: 22px; height: 22px; border-radius: 50%; background: var(--color-amber-500); color: var(--color-navy-950); display:flex; align-items:center; justify-content:center; font-size: 12px; }
 .hero h1 { font-size: clamp(26px, 4vw, 46px); color: #fff; text-shadow: 0 2px 18px rgba(0,0,0,0.35); }
 .accent { color: var(--color-amber-400); }
 .hero .lede { margin-top: 22px; font-size: 18px; color: rgba(255,255,255,0.86); max-width: 540px; }
@@ -264,12 +264,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 .service-card:hover { box-shadow: var(--shadow-lift); transform: translateY(-4px); border-color: transparent; }
 .service-card .icon {
-  width: 64px; height: 64px; border-radius: 16px;
-  background: linear-gradient(135deg, var(--color-red-600), var(--color-amber-500));
-  color: #fff; box-shadow: 0 10px 20px -8px rgba(200,55,47,0.55);
+  width: 46px; height: 46px;
+  color: var(--color-gold-700);
   display: flex; align-items: center; justify-content: center;
-  font-size: 28px; margin-bottom: 22px;
+  margin-bottom: 20px;
 }
+.service-card .icon svg { width: 100%; height: 100%; }
 .service-card h3 { font-size: 19px; color: var(--color-navy-950); margin-bottom: 10px; }
 .service-card p { color: var(--color-ink-soft); font-size: 15px; }
 .service-card .tag-list { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -294,7 +294,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 .process-step:nth-child(4n+2) { background: var(--color-navy-800); }
 .process-step:nth-child(4n+3) { background: var(--color-navy-700); }
-.process-step:nth-child(4n+4) { background: linear-gradient(160deg, var(--color-red-600), #a92a23); }
+.process-step:nth-child(4n+4) { background: linear-gradient(160deg, var(--color-gold-700), var(--color-gold-900)); }
 .process-step .num { font-size: 34px; font-weight: 800; opacity: 0.35; margin-bottom: 18px; }
 .process-step h3 { font-size: 17px; margin-bottom: 10px; }
 .process-step p { font-size: 14px; opacity: 0.82; }
@@ -312,7 +312,7 @@ button { font-family: inherit; cursor: pointer; }
 .why-item { display: flex; gap: 16px; }
 .why-item .check {
   flex: none; width: 30px; height: 30px; border-radius: 50%;
-  background: var(--color-red-50); color: var(--color-red-600);
+  background: var(--color-gold-50); color: var(--color-gold-700);
   display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;
 }
 .why-item h4 { font-size: 16px; color: var(--color-navy-950); margin-bottom: 4px; }
@@ -329,13 +329,13 @@ button { font-family: inherit; cursor: pointer; }
 .why-panel::after {
   content: "";
   position: absolute; right: -60px; top: -60px; width: 220px; height: 220px;
-  border-radius: 50%; background: radial-gradient(circle, rgba(221,69,59,0.35), transparent 70%);
+  border-radius: 50%; background: radial-gradient(circle, rgba(230,181,85,0.35), transparent 70%);
 }
 .why-panel .quote { font-size: 20px; line-height: 1.5; position: relative; z-index: 1; }
 .why-panel .who { margin-top: 26px; display: flex; align-items: center; gap: 14px; position: relative; z-index: 1; }
 .why-panel .who .avatar {
   width: 46px; height: 46px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-amber-500), var(--color-red-600));
+  background: linear-gradient(135deg, var(--color-amber-400), var(--color-amber-500));
 }
 .why-panel .who b { display: block; font-size: 14px; }
 .why-panel .who span { font-size: 12px; opacity: 0.65; }
@@ -352,11 +352,12 @@ button { font-family: inherit; cursor: pointer; }
   gap: 24px;
 }
 .route-city { text-align: center; }
-.route-city .flag { font-size: 34px; }
+.route-city .flag { display: inline-block; width: 72px; }
+.route-city .flag svg { width: 100%; height: auto; display: block; }
 .route-city h3 { margin-top: 12px; font-size: 20px; color: var(--color-navy-950); }
 .route-city p { color: var(--color-ink-soft); font-size: 14px; margin-top: 6px; }
-.route-mid { text-align: center; color: var(--color-red-600); }
-.route-mid .line { width: 120px; height: 2px; background: repeating-linear-gradient(90deg, var(--color-red-600) 0 8px, transparent 8px 14px); margin: 0 auto 8px; }
+.route-mid { text-align: center; color: var(--color-gold-700); }
+.route-mid .line { width: 120px; height: 2px; background: repeating-linear-gradient(90deg, var(--color-amber-500) 0 8px, transparent 8px 14px); margin: 0 auto 8px; }
 
 /* ---------------- Testimonials ---------------- */
 .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -375,13 +376,13 @@ button { font-family: inherit; cursor: pointer; }
 .cta-banner {
   border-radius: var(--radius-lg);
   padding: 64px;
-  background: linear-gradient(120deg, var(--color-red-600), #9c2a23 70%);
+  background: linear-gradient(120deg, var(--color-gold-700), var(--color-gold-900) 70%);
   color: #fff;
   display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;
 }
 .cta-banner h2 { font-size: clamp(24px, 3vw, 32px); max-width: 560px; }
 .cta-banner p { margin-top: 12px; opacity: 0.85; max-width: 520px; }
-.cta-banner .btn--primary { background: #fff; color: var(--color-red-600); }
+.cta-banner .btn--primary { background: #fff; color: var(--color-gold-700); }
 .cta-banner .btn--primary:hover { background: var(--color-navy-50); }
 
 /* ---------------- Contact ---------------- */
@@ -393,6 +394,7 @@ button { font-family: inherit; cursor: pointer; }
   background: var(--color-navy-900); color: #fff;
   display: flex; align-items: center; justify-content: center;
 }
+.contact-info .icon svg { width: 20px; height: 20px; }
 .contact-info h4 { font-size: 14px; color: var(--color-ink-soft); font-weight: 700; }
 .contact-info p { font-size: 16px; color: var(--color-navy-950); font-weight: 600; margin-top: 4px; }
 
@@ -432,7 +434,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.08);
   display: flex; align-items: center; justify-content: center; transition: var(--transition);
 }
-.social-row a:hover { background: var(--color-red-600); }
+.social-row a:hover { background: var(--color-gold-700); }
 
 /* ---------------- Utilities ---------------- */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
